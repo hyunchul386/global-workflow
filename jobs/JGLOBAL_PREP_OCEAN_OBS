@@ -14,6 +14,10 @@ YMD=${PDY} HH=${cyc} generate_com -rx COMOUT_OBS:COM_OBS_TMPL
 # Begin JOB SPECIFIC work
 ##############################################
 
+# Add UFSDA to PYTHONPATH
+ufsdaPATH="${HOMEgfs}/sorc/gdas.cd/ush/"
+pyiodaPATH="${HOMEgfs}/sorc/gdas.cd/build/lib/python3.7/"
+PYTHONPATH="${PYTHONPATH:+${PYTHONPATH}:}${ufsdaPATH}:${pyiodaPATH}"
 # Add prep_marine_obs.py to PYTHONPATH
 export PYTHONPATH=${HOMEgfs}/sorc/gdas.cd/ush/soca:${PYTHONPATH}
 
